@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+python/src/aumos_sdk/_generated/
+
+# TypeScript / Node
+node_modules/
+typescript/dist/
+typescript/src/_generated/
+*.tsbuildinfo
+
+# Go
+go/_generated/
+go/vendor/
+
+# Java
+java/target/
+java/*.class
+*.jar
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+*.env
+
+# Test artifacts
+test-results/
+coverage/

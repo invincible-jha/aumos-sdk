@@ -1,0 +1,45 @@
+# OpenAPI Code Generation Configuration
+# Used by openapi-generator-cli to produce SDK stubs
+
+generatorVersion: "7.2.0"
+
+generators:
+  python:
+    generatorName: python
+    inputSpec: ./aumos-api.yaml
+    outputDir: ../python/src/aumos_sdk/_generated
+    additionalProperties:
+      packageName: aumos_sdk._generated
+      projectName: aumos-sdk
+      packageVersion: "1.0.0"
+      pythonAttrNoneIfUnset: "true"
+      generateSourceCodeOnly: "true"
+
+  typescript-fetch:
+    generatorName: typescript-fetch
+    inputSpec: ./aumos-api.yaml
+    outputDir: ../typescript/src/_generated
+    additionalProperties:
+      npmName: "@aumos/sdk"
+      npmVersion: "1.0.0"
+      typescriptThreePlus: "true"
+      supportsES6: "true"
+
+  go:
+    generatorName: go
+    inputSpec: ./aumos-api.yaml
+    outputDir: ../go/_generated
+    additionalProperties:
+      packageName: aumos
+      moduleName: go.aumos.io/sdk
+
+  java:
+    generatorName: java
+    inputSpec: ./aumos-api.yaml
+    outputDir: ../java
+    additionalProperties:
+      groupId: io.aumos
+      artifactId: aumos-sdk
+      artifactVersion: "1.0.0"
+      library: okhttp-gson
+      java8: "true"
