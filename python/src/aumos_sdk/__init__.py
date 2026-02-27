@@ -42,6 +42,13 @@ Quick start::
 
 from .auth import ApiKeyAuth, AuthStrategy, BearerTokenAuth, create_auth_strategy
 from .client import AumOSClient, AgentsResource, GovernanceResource, ModelsResource, RunsResource
+from .error_unifier import ErrorUnifier
+from .go_client import GoClientGenerator
+from .integration_guide import IntegrationGuideGenerator
+from .java_client import JavaClientGenerator
+from .openapi_codegen import OpenAPICodegen
+from .python_async_client import PythonAsyncClientGenerator
+from .typescript_client import TypeScriptClientGenerator
 from .exceptions import (
     AumOSAPIError,
     AumOSError,
@@ -129,4 +136,12 @@ __all__ = [
     "CreateAgentRequest",
     "CreateRunRequest",
     "UpdateAgentRequest",
+    # SDK tooling
+    "ErrorUnifier",
+    "GoClientGenerator",
+    "IntegrationGuideGenerator",
+    "JavaClientGenerator",
+    "OpenAPICodegen",
+    "PythonAsyncClientGenerator",
+    "TypeScriptClientGenerator",
 ]
