@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aumos-cli"
+version = "1.0.0"
+description = "AumOS CLI — event forwarding, API testing, and credential management for local development"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1",
+    "httpx>=0.27",
+    "confluent-kafka>=2.3",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "rich>=13.0",
+    "structlog>=24.1",
+]
+
+[project.scripts]
+aumos = "aumos_cli.main:cli"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aumos_cli"]
